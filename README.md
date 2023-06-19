@@ -35,7 +35,7 @@ By trainig deep learning model to predict sugar content of apple(Brix), predicti
 
 #### Hardware setting
 
-<img src="angle_picture.png" style="width:700px;height:430px;">
+<img width="435" alt="angle_picture" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/27504f9d-6e9a-4866-9981-8bb263b2b2ee">
 
 <img src="angle.png" style="width:700px;height:430px;">
 
