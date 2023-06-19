@@ -149,7 +149,7 @@ Because each driver has proper versions for compatbility, you must select the ap
 
 **1. Check PyTorch & CUDA Version**
 
-<img src="pytorch.png">
+<img width="635" alt="pytorch" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/3595a722-11ec-420f-b1a8-d94f590116bb">
 
 > **Figure 3. Pytorch & CUDA Version**
 
@@ -157,13 +157,13 @@ To use PyTorch, we have to use 11.7 or 11.8 version of CUDA.
 
 **2. Check Proper GPU Version for CUDA 11.7** 
 
-<img src="toolkit.png">
+<img width="733" alt="toolkit" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/bdc69e89-e0d0-40db-bb62-7f93d227200b">
 
 > **Figure 4. CUDA Toolkit**
 
 **Install GPU Driver**
 
-<img src="gpudriver.png">
+<img width="387" alt="gpudriver" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/133fffb1-938d-41b8-9d89-66fa70ddd937">
 
 > **Figure 5. GPU Driver**
 
@@ -173,7 +173,7 @@ By checking your computer's information, install GPU Driver.
 
 **3. Check Proper cuDNN Version for CUDA 11.7** 
 
-<img src="cudnn.png">
+<img width="1024" alt="cudnn" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/6a12ba30-1f3d-4380-ac23-cc2d8e04a1e3">
 
 > **Figure 6. cuDNN version**
 
@@ -203,7 +203,7 @@ Install PyTorch with CUDA 11.7 version
 
 When measuring the sweetness of an apple, it is necessary to predict the sweetness only within the apple region, rather than the entire image. Therefore, segmentation is essential. After trying various models, we found that the pretrained model provided by Yolov8s-seg performed the best in apple segmentation, so we utilized it. By using the pretrained model, we were able to invest more time in training.
 
-<img src="\seg.png" style="zoom: 67%;" />
+<img width="486" alt="seg" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/5f51f480-090c-4774-ad52-19a6be9272cf">
 
 > **Figure 7. Result of apple segmentation with yolov8-seg**
 
@@ -211,13 +211,13 @@ When measuring the sweetness of an apple, it is necessary to predict the sweetne
 
 To predict the sweetness of an apple, the model needs to be trained solely on apple images and corresponding sweetness labels, solving a regression problem for sweetness prediction. Therefore, we determined that using a sophisticated and highly accurate model is appropriate. We experimented with various models such as resNet50, DenseNet, VGG16, Inception v3, among others, but encountered significant loss compared to our expectations.
 
-![](\models.JPG)
+![models](https://github.com/GracenPraise/DLIP2023/assets/91367451/230886fc-1a29-49c1-902d-dfedb5d6f91f)
 
 > **Figure 8. MES loss comparison of multiple deep learning model**
 
 Therefore, we decided to utilize the Vision Transformer model, which has been widely used in deep learning for image processing recently. Specifically, we employed the vit_base_patch16_224 model, which accepts inputs of size 224x224 and utilizes a 16-patch approach.
 
-<img src="\vit.JPG" style="zoom: 67%;" />
+![vit](https://github.com/GracenPraise/DLIP2023/assets/91367451/a96e86d7-e83c-4e67-9865-0d195376a184)
 
 > **Figure 8. Structure of Vision Transformers (VIT). Referenced by 'Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., & Houlsby, N. (2021). An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. ICLR.'**
 
@@ -319,7 +319,7 @@ num_models = 3
 
 During the project, it was observed that the set target train loss of less than 2 was met, and it was confirmed that the training proceeded smoothly without any signs of overfitting.
 
-<img src="loss.png" style="zoom:80%;" />
+![loss](https://github.com/GracenPraise/DLIP2023/assets/91367451/79ed37bb-f551-4ecc-baa8-2e9b5494548a)
 
 > **Graph1. Train and Validation Loss Graph**
 
@@ -331,7 +331,7 @@ During the project, it was observed that the set target train loss of less than 
 
 The code was written to utilize the segmentation model and regression model developed in the above process, enabling real-time prediction of apple sweetness. The simple flow is as follows.
 
-![](flow.JPG)
+![flow](https://github.com/GracenPraise/DLIP2023/assets/91367451/331d7430-a64a-4ffe-b2d8-a3e19b6e990c)
 
 > **Chart 1. Flow Chart**
 
@@ -447,7 +447,7 @@ Finally, the results are displayed on the screen. Pressing the 'r' key takes you
 
 Due to the heavy computational load of the model used for real-time apple sweetness prediction, significant frame drops occur. To mitigate this issue, the prediction is performed only when the apple is placed in position and the Enter key is pressed. To prevent the fluctuation of values with each frame change, the average sweetness value from multiple frames is used. The accumulated sweetness values are continuously added to calculate the average. If the apple is changed, the 'r' key should be pressed to reset the accumulation before proceeding with prediction by pressing the Enter key again.
 
-| <img src="\ready.JPG" style="zoom:25%;" /> | <img src="\press_enter.JPG" style="zoom:25%;" /> | <img src="\result.JPG" style="zoom:25%;" /> |
+| ![ready](https://github.com/GracenPraise/DLIP2023/assets/91367451/ba8f6e11-ec82-4565-bc6d-8b688a37ba02) | ![press_enter](https://github.com/GracenPraise/DLIP2023/assets/91367451/2fb3adb9-62b7-492c-8600-97b9e51f096f) | ![result](https://github.com/GracenPraise/DLIP2023/assets/91367451/0f0d6a77-ac59-4752-9504-66418f435a9b) |
 | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 |  **Figure 9. When No Object in Frame**   |    **Figure 10. When Apple Deteted**     |      **Figure 11. Brix Prediction**      |
 
@@ -457,7 +457,7 @@ Due to the heavy computational load of the model used for real-time apple sweetn
 
 ### Results
 
-<img src="result_brix.jpg" style="width:700px;height:500px;">
+![result_brix](https://github.com/GracenPraise/DLIP2023/assets/91367451/7102e510-d952-4672-9265-2948cf7be08f)
 
 > **Figure 12. Result**
 
@@ -497,7 +497,7 @@ In the process of training model, we can check train loss under 2 MSE loss and t
 
 Upon examining the data used for training, it was observed that more than 70% of the images were captured in an orchard. This indicates that the photos were taken under sufficient lighting conditions, implying that evaluating the model trained indoors may introduce errors. To mitigate this, it is expected that increasing the quantity of training data captured under indoor conditions would lead to improved performance.
 
-<img src="oneside.png" style="width:700px;height:500px;">
+<img width="576" alt="oneside" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/1fd6c890-8621-414b-b9b2-944864f42f6a">
 
 > **Figure 13. Most of Images Taken in Outside**
 
@@ -507,7 +507,7 @@ Upon examining the data used for training, it was observed that more than 70% of
 
 Furthermore, it was observed that when the camera and the apple underwent rotation, the sweetness value varied even for the same apple. This could be attributed to the fact that the apple images used for training represented only one side of the apple, potentially introducing errors. It is believed that training with multiple angle images for a given apple-sweetness dataset could help reduce such errors.
 
-| <img src="normal.jpg" style="width:300px;height:300px;"> | <img src="rotation.jpg" style="width:300px;height:300px;"> |
+|![normal](https://github.com/GracenPraise/DLIP2023/assets/91367451/a46e0ca3-3834-4d11-b021-52bdb1668017) | ![rotation](https://github.com/GracenPraise/DLIP2023/assets/91367451/6a59645b-7784-4cbf-ad07-077b6fbf0f79) |
 | :--------------------------------------: | :--------------------------------------: |
 | **Figure 14. Before Rotation (12.26 Brix)** | **Figure 15. After Rotation (10.35 Brix)** |
 
