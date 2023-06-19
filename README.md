@@ -37,7 +37,7 @@ By trainig deep learning model to predict sugar content of apple(Brix), predicti
 
 <img width="435" alt="angle_picture" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/27504f9d-6e9a-4866-9981-8bb263b2b2ee">
 
-<img src="angle.png" style="width:700px;height:430px;">
+<img width="479" alt="angle" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/855b377f-54f2-4cf4-a6d8-e0567ba2c8a8">
 
 > **Figure 1. Camera's Angle & Distance**
 
@@ -68,7 +68,7 @@ By trainig deep learning model to predict sugar content of apple(Brix), predicti
 
 ## 2. Dataset
 
-<img src="dataset.png">
+<img width="359" alt="dataset" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/1d6f28ab-d4e0-4bcb-9c91-57648fc9b617">
 
 > **Figure 2. Deep Learning Dataset about apple from Jeonbuk**
 
@@ -82,7 +82,7 @@ Dataset from Jeonbuk is provided labeling data as json file.
 
 |      Sugar Content       |         Segmentation         |
 | :----------------------: | :--------------------------: |
-| <img src="labeling.png"> | <img src="segmentation.png"> |
+| <img width="195" alt="labeling" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/02cca91c-0e7d-4893-8477-231fec72f31c"> | <img width="468" alt="segmentation" src="https://github.com/GracenPraise/DLIP2023/assets/91367451/1f42ea61-5bdf-4ae9-bc59-e426ef442e77">> |
 
 > **Table 2. Labeling Data**
 
